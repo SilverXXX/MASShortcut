@@ -63,10 +63,10 @@
     }
 }
 
-- (void)setAppearance:(MASShortcutViewAppearance)appearance
+- (void)setViewAppearance:(MASShortcutViewAppearance)appearance
 {
-    if (_appearance != appearance) {
-        _appearance = appearance;
+    if (_viewAppearance != appearance) {
+        _viewAppearance = appearance;
         [self resetShortcutCellStyle];
         [self setNeedsDisplay:YES];
     }
@@ -74,7 +74,7 @@
 
 - (void)resetShortcutCellStyle
 {
-    switch (_appearance) {
+    switch (_viewAppearance) {
         case MASShortcutViewAppearanceDefault: {
             _shortcutCell.bezelStyle = NSRoundRectBezelStyle;
             break;
@@ -139,7 +139,7 @@
     _shortcutCell.state = state;
     _shortcutCell.enabled = self.enabled;
 
-    switch (_appearance) {
+    switch (_viewAppearance) {
         case MASShortcutViewAppearanceDefault: {
             [_shortcutCell drawWithFrame:frame inView:self];
             break;

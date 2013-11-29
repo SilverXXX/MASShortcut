@@ -11,6 +11,6 @@ typedef enum {
 @property (nonatomic, getter = isRecording) BOOL recording;
 @property (nonatomic, getter = isEnabled) BOOL enabled;
 @property (nonatomic, copy) void (^shortcutValueChange)(MASShortcutView *sender);
-@property (nonatomic) MASShortcutViewAppearance _appearance;
+@property (nonatomic) MASShortcutViewAppearance viewAppearance;
 
 @end
